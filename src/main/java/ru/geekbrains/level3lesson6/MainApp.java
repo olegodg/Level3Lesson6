@@ -8,15 +8,15 @@ public class MainApp {
             System.out.println(result);
         }
 
-        public static int[] pullOut(int[] arrayInput) {
+        public static int[] pullOut(int[] input) {
             int[] backArray = new int[2];
-            if(arrayInput.length == 0) {
+            if(input.length == 0) {
                 System.out.println("В массиве нет элементов");
-                return arrayInput;
+                return input;
             }
-            for (int i = arrayInput.length - 3; i >= 0 ; i--) {
-                if(arrayInput[i] == 4) {
-                    System.arraycopy(arrayInput, (i+1), backArray,0,2);
+            for (int i = input.length - 3; i >= 0 ; i--) {
+                if(input[i] == 4) {
+                    System.arraycopy(input, (i+1), backArray,0,2);
                     return backArray;
                 }
             }
